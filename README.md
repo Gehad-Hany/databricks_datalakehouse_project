@@ -11,7 +11,7 @@ The goal of this project is to ingest raw data from **CRM** and **ERP** CSV sour
 
 The data architecture for this project follows the **Medallion Architecture** using **Bronze**, **Silver**, and **Gold** layers:
 
-![Lakehouse Architecture](docs/lakehouse_architecture.png)
+![Lakehouse Architecture](docs/diagram1.png)
 
 1. **Bronze Layer**  
    Stores raw data as-is from the source systems with minimal transformation.  
@@ -180,7 +180,7 @@ The Gold layer contains business-ready analytical tables.
 
 The final analytical model is built as a **Star Schema**:
 
-![Sales Star Schema](docs/star_schema.png)
+![Sales Star Schema](docs/sales_star_schema.png)
 
 ### Fact Table
 - **`gold.fact_sales`**
@@ -210,7 +210,7 @@ This schema supports business analysis such as:
 
 The project includes orchestration notebooks to execute each layer in sequence:
 
-![Orchestration Flow](docs/orchestration_flow.png)
+![Orchestration Flow](docs/orchestration.png)
 
 ### Orchestration Notebooks
 - `bronze_layer`
